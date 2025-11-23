@@ -4,6 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Area</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 50px;
+        background-color: #f2f2f2;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      form {
+        max-width: 300px;
+        margin: auto;
+        background-color: salmon;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0 15px 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: none;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #result {
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <h2>Login Form</h2>
@@ -33,6 +78,13 @@
             result.style.color = "white";
             result.style.backgroundColor = "red";
             return;
+          } else {
+            result.textContent = "Login Berhasil!";
+            result.style.color = "white";
+            result.style.backgroundColor = "green";
+            setTimeout(() => {
+              window.location.href = "dash.html";
+            }, 2000);
           }
 
           // Data User
