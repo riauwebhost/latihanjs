@@ -82,15 +82,19 @@
             result.textContent = "Username dan Password salah!";
             result.style.color = "white";
             result.style.backgroundColor = "red";
-            return;
-          } else {
-            result.textContent = "Login Berhasil!";
-            result.style.color = "white";
-            result.style.backgroundColor = "green";
             setTimeout(() => {
               window.location.reload();
             }, 2000);
+            return;
           }
+
+          // Jika login berhasil
+          result.textContent = "Login Berhasil!";
+          result.style.color = "white";
+          result.style.backgroundColor = "green";
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000);
 
           // Data User
           const contohUser = {
